@@ -505,7 +505,7 @@ var Graphic = (function() {
             if(people_got_off_by_floor['f' + (i + 1)] && people_got_off_by_floor['f' + (i + 1)].length > 0) {
                 var x_offset = 2 * padding + building_width_px + (people_by_floor['f' + (i + 1)] ? people_by_floor['f' + (i + 1)].length : 0) * (Config.person_width_px + Config.person_gap_px);
                 for(var j = 0;j < people_got_off_by_floor['f' + (i + 1)].length;j++) {
-                    context.fillStyle = "#5cb85c";
+                    context.fillStyle = "#5cb85c"; // Green
                     context.fillRect(
                         x_offset + j * (Config.person_width_px + Config.person_gap_px),
                         padding + building_height_px - i * elevator_height_px - person_height_px,
@@ -552,7 +552,7 @@ var Config = {
                           // http://www.businessinsider.com/the-8-fastest-elevators-in-the-world-2013-1?IR=T&op=1
     elevator_speed_m_per_s:1, // by default, this is elevator is a slow one
     elevator_wait_time_s:5,
-    simulation_time:1000,
+    simulation_time:1000,  // From 1000
     canvas_width:500,
     canvas_height:500,
     elevator_width_px:12,
